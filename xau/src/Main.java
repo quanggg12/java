@@ -9,32 +9,27 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String name, pass;
-        int cnt = 0;
-        int flag = 0;
-        name = sc.nextLine();
-        pass = sc.nextLine();
-        if (name.equalsIgnoreCase("hello") && pass.length() > 6) {
-            System.out.println("Nhap dung");
-            flag = 1;
+        int cnt = 0; 
 
-        } else {
+        while (cnt < 3) {
+            System.out.print("Nhập tên: ");
             name = sc.nextLine();
+            System.out.print("Nhập mật khẩu: ");
             pass = sc.nextLine();
-            cnt++;
+
             if (name.equalsIgnoreCase("hello") && pass.length() > 6) {
-                System.out.println("Nhap dung");
-                flag = 1;
-                break;
-            }
-            if (cnt == 3) {
-                break;
+                System.out.println("Nhập đúng");
+                show();
+                tach_ht();
+                break; 
+            } else {
+                cnt++; 
+                System.out.println("Tên hoặc mật khẩu không đúng. Vui lòng thử lại (" + cnt + "/3 lần)");
             }
         }
 
-
-        if(flag == 1) {
-            show();
-            tach_ht();
+        if (cnt == 3) {
+            System.out.println("Bạn đã nhập sai 3 lần");
         }
     }
 
