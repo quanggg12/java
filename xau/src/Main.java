@@ -12,24 +12,24 @@ public class Main {
         int cnt = 0; 
 
         while (cnt < 3) {
-            System.out.print("Nhập tên: ");
+            System.out.print("Nhap ten: ");
             name = sc.nextLine();
-            System.out.print("Nhập mật khẩu: ");
+            System.out.print("Nhap mat khau: ");
             pass = sc.nextLine();
 
             if (name.equalsIgnoreCase("hello") && pass.length() > 6) {
-                System.out.println("Nhập đúng");
+                System.out.println("Nhap dung");
                 show();
                 tach_ht();
                 break; 
             } else {
                 cnt++; 
-                System.out.println("Tên hoặc mật khẩu không đúng. Vui lòng thử lại (" + cnt + "/3 lần)");
+                System.out.println("Ten hoac mat khau ko dung. Hay thu lai (" + cnt + "/3 lan)");
             }
         }
 
         if (cnt == 3) {
-            System.out.println("Bạn đã nhập sai 3 lần");
+            System.out.println("Ban da nhap sai 3 lan");
         }
     }
 
